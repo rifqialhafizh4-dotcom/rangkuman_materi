@@ -1,0 +1,75 @@
+RANGKUMAN MATERI SELAMA PELATIHAN
+
+1. Version control system 
+    Version control adalah suatu kegiatan yang dilakukan dalam mengelola perubahan pada file dari waktu ke waktu, sedangkan
+    Version control system adalah alat yang digunakan untuk melakukan pengelolaan file tersebut
+    VCS memiliki 3 jenis:
+    1. VCS Lokal
+        yaitu vcs generasi pertama yang mampu menyimpan semua perubahan pada file
+    2. VCS Terpusat
+        Dikembangkan agar developer bisa berkolaborasi di sistem lain yang di mana seluruh versi disimpan di satu server pusat
+    3. VCS Terdistribusi
+        memiliki salinan lengkap dari repositori file beserta riwayat perubahannya
+
+2. Git
+    Git adalah VCS yang paling banyak digunakan saat ini. Ia adalah salah satu VCS terdistribusi yang gratis dan open source.
+    Kegunaan git:
+    1. Pelacakan riwayat perubahan
+    2. Kolaborasi jarak jauh
+    3. Branching dan Merging
+    
+    Menyiapkan Git
+    Hal yang bisa dilakukan di terminal cmd:
+    1. git config --list
+    2. git config --list --show-origin
+    3. git config <key>
+    4. git config <key> <value>
+    5. git config --unset <key>
+    Mengatur nama dan email:
+    1. git config --global user.name "Romi Kusuma Bakti"
+    2. git config --global user.email romikusumab@gmail.com
+
+3. Dasar Dasar Git
+    Repositori adalah Kumpulan file beserta riwayat perubahannya
+    Untuk mengubah folder atau file menjadi repositori yaitu menggunakan "git init" di terminal vscode
+    Membuat commit baru 
+    Dalam git, setiap file memiliki 4 status diantaranya yaitu:
+    1. untracked yaitu menandakan bahwa file nya ada namun tidak bisa mengecek isinya
+    2. unmodified yaitu sudah tidak bisa diubah karena sudah di commit
+    3. modified yaitu filenya masih bisa diubah
+    4. straged yaitu jika ingin di commit file nya, harus melakukan add file terlebih dahulu file mana yang ingin kita commit
+    Untuk memeriksa status file yaitu dengan cara "git status"
+    Untuk menambahkan file agar terbaca isinya dan ingin di commit ada 4 penggunaan nya yaitu: 
+    1. git add file.txt jika satu file doang yang ingin di commit
+    2. git add file.txt file.html jika ingin lebih dari satu file
+    3. git add *.txt jika ingin semua file txt yang ingin di tambahkan
+    4. git add . jika ingin menambahkan semua file sekaligus
+    5. git add ./img jika ingin menambahkan semua file yang ada di folder img
+    Langkah awal jika ingin mengcommit file yaitu seperti berikut contohnya:
+    git commit -m "Commit pertama"
+    Jika ingin membatalkan status file menjadi status awal yaitu dengan beberapa cara:
+    1. git reset
+    2. git reset HEAD file.txt
+    3. git reset HEAD~1
+    4. git reset --hard HEAD~1
+    Untuk melihat riwayat perubahan nya yaitu dengan beberapa cara seperti berikut:
+    1. git log
+    2. git log --oneline
+    3. git log --graph
+
+4. Menggunakan Remote
+    Mengkloning repository yang sudah ada di github yaitu "git clone https://github.com/rifqialhafizh4-dotcom/rangkuman_materi.git"
+    Jika ingin menambahkan git remote baru yaitu git remote add origin https://github.com/rifqialhafizh4-dotcom/rangkuman_materi.git
+    jika ingin menampilkan nya yaitu git remote -v
+    cd uji_coba yaitu untuk memindahkan file ke folder uji_coba
+
+5. Github
+    GitHub adalah tempat hosting repositori Git yang paling populer dan paling banyak digunakan di dunia kerja dibandingkan alternatif seperti GitLab
+    Menambahkan file README untuk menyampaikan suatu informasi penting tentang project yang kita buat
+    Menghubungkan repository ke github yaitu dengan cara sebagai berikut:
+    1. Klik tombol ikon plus (+) di kanan atas, lalu pilih New repository
+    2. Masukkan nama repository, sebaiknya sama dengan nama repository lokal yang akan kita hubungkan.
+    3. Field yang lain biarkan saja. Kalau sudah, klik tombol Create repository
+    4. Mengubah nama branch utama yaitu "git branch -M main
+    5. Menambahkan remote repository lokal kita dengan cara : "git remote add origin https://github.com/romi/latihan-1.git"
+    6. Unggah data ke GitHub dengan menjalankan push yaitu "git push -u origin main". Flag -u berguna agar Git mengingat nama remote dan branch, sehingga untuk unggahan berikutnya Anda hanya perlu mengetik git push saja
